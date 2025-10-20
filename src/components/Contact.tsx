@@ -1,17 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, Linkedin, Github, Instagram, Twitter } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
     {
-      icon: Phone,
+      icon: "Images/phone.png",
       label: "Phone",
       value: "+91-8828826211",
       link: "tel:+918828826211"
     },
     {
-      icon: Mail,
+      icon: "Images/email.png",
       label: "Email",
       value: "work.ganeshpawar03@gmail.com",
       link: "mailto:work.ganeshpawar03@gmail.com"
@@ -20,28 +19,28 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: Linkedin,
+      icon: "Images/linkedin.svg",
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/ganesh-pawar143",
-      color: "hover:text-[#0077b5]"
+      color: "hover:opacity-80"
     },
     {
-      icon: Github,
+      icon: "Images/github.svg",
       label: "GitHub",
       url: "https://github.com/ganesh-1433",
-      color: "hover:text-foreground"
+      color: "hover:opacity-80"
     },
     {
-      icon: Instagram,
+      icon: "Images/instagram.svg",
       label: "Instagram",
       url: "https://www.instagram.com/ganesh_p1433",
-      color: "hover:text-[#E4405F]"
+      color: "hover:opacity-80"
     },
     {
-      icon: Twitter,
+      icon: "Images/twitter.svg",
       label: "Twitter",
       url: "https://x.com/gpawar0207",
-      color: "hover:text-[#1DA1F2]"
+      color: "hover:opacity-80"
     }
   ];
 
@@ -64,7 +63,7 @@ const Contact = () => {
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <info.icon className="w-6 h-6 text-primary" />
+                    <img src={info.icon} alt={info.label} className="w-6 h-6" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">{info.label}</p>
@@ -89,10 +88,10 @@ const Contact = () => {
                   key={index}
                   variant="outline"
                   size="lg"
-                  className={`border-border ${social.color} transition-colors`}
+                  className={`border-border ${social.color} transition-all`}
                   onClick={() => window.open(social.url, "_blank")}
                 >
-                  <social.icon className="w-5 h-5 mr-2" />
+                  <img src={social.icon} alt={social.label} className="w-5 h-5 mr-2" />
                   {social.label}
                 </Button>
               ))}
