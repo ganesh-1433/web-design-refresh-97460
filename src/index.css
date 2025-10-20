@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 40% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 35% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 35% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 190 95% 55%;
+    --primary-foreground: 220 40% 8%;
+
+    --secondary: 280 70% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 22%;
+    --muted-foreground: 217 20% 70%;
+
+    --accent: 310 65% 55%;
+    --accent-foreground: 220 40% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 30% 20%;
+    --input: 215 30% 18%;
+    --ring: 190 95% 55%;
+
+    --radius: 0.75rem;
+
+    /* Enhanced gradient system */
+    --gradient-primary: linear-gradient(135deg, hsl(190 95% 55%), hsl(280 70% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280 70% 60%), hsl(310 65% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(190 95% 55%), hsl(310 65% 55%));
+    --gradient-card: linear-gradient(135deg, hsl(220 35% 12%), hsl(220 35% 15%));
+    --gradient-border: linear-gradient(135deg, hsl(190 95% 55% / 0.5), hsl(280 70% 60% / 0.5));
+    
+    /* Enhanced glow effects */
+    --glow-primary: 0 0 60px hsl(190 95% 55% / 0.4), 0 0 30px hsl(190 95% 55% / 0.2);
+    --glow-secondary: 0 0 60px hsl(280 70% 60% / 0.4), 0 0 30px hsl(280 70% 60% / 0.2);
+    --glow-accent: 0 0 60px hsl(310 65% 55% / 0.4), 0 0 30px hsl(310 65% 55% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(220 40% 8%), hsl(230 35% 12%), hsl(220 40% 8%));
+    background-attachment: fixed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), var(--glow-primary);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: var(--gradient-border);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5;
+  }
+
+  .card-gradient:hover::before {
+    opacity: 1;
+  }
+}
