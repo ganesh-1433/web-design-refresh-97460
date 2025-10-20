@@ -4,13 +4,13 @@ import { Card, CardContent } from "@/components/ui/card";
 const Contact = () => {
   const contactInfo = [
     {
-      icon: "Images/phone.png",
+      icon: "/images/phone.png",
       label: "Phone",
       value: "+91-8828826211",
       link: "tel:+918828826211"
     },
     {
-      icon: "Images/email.png",
+      icon: "/images/email.png",
       label: "Email",
       value: "work.ganeshpawar03@gmail.com",
       link: "mailto:work.ganeshpawar03@gmail.com"
@@ -19,25 +19,25 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: "Images/linkedin.svg",
+      icon: "/images/linkedin.svg",
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/ganesh-pawar143",
       color: "hover:opacity-80"
     },
     {
-      icon: "Images/github.svg",
+      icon: "/images/github.svg",
       label: "GitHub",
       url: "https://github.com/ganesh-1433",
       color: "hover:opacity-80"
     },
     {
-      icon: "Images/instagram.svg",
+      icon: "/images/instagram.svg",
       label: "Instagram",
       url: "https://www.instagram.com/ganesh_p1433",
       color: "hover:opacity-80"
     },
     {
-      icon: "Images/twitter.svg",
+      icon: "/images/twitter.svg",
       label: "Twitter",
       url: "https://x.com/gpawar0207",
       color: "hover:opacity-80"

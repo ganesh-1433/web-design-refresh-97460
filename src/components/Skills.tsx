@@ -5,37 +5,37 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", icon: "Images/python.png" },
-        { name: "SQL", icon: "Images/sql.png" }
+        { name: "Python", icon: "/images/python.png" },
+        { name: "SQL", icon: "/images/sql.png" }
       ]
     },
     {
       title: "Libraries & Frameworks",
       skills: [
-        { name: "NumPy", icon: "Images/numpy.svg" },
-        { name: "Pandas", icon: "Images/pandas.svg" },
-        { name: "Matplotlib", icon: "Images/matplotlib.svg" },
-        { name: "Seaborn", icon: "Images/seaborn.svg" },
-        { name: "Scikit-Learn", icon: "Images/sklearn.svg" }
+        { name: "NumPy", icon: "/images/numpy.svg" },
+        { name: "Pandas", icon: "/images/pandas.svg" },
+        { name: "Matplotlib", icon: "/images/matplotlib.svg" },
+        { name: "Seaborn", icon: "/images/seaborn.svg" },
+        { name: "Scikit-Learn", icon: "/images/sklearn.svg" }
       ]
     },
     {
       title: "Tools & Platforms",
       skills: [
-        { name: "Power BI", icon: "Images/powerbi.svg" },
-        { name: "VS Code", icon: "Images/vscode.svg" },
-        { name: "Tableau", icon: "Images/tableau.svg" },
-        { name: "Excel", icon: "Images/excel.svg" }
+        { name: "Power BI", icon: "/images/powerbi.svg" },
+        { name: "VS Code", icon: "/images/vscode.svg" },
+        { name: "Tableau", icon: "/images/tableau.svg" },
+        { name: "Excel", icon: "/images/excel.svg" }
       ]
     },
     {
       title: "Databases",
       skills: [
-        { name: "MySQL", icon: "Images/mysql.svg" },
-        { name: "MongoDB", icon: "Images/mongodb.png" },
-        { name: "Oracle", icon: "Images/oracle.svg" },
-        { name: "SQLite", icon: "Images/sqlite.svg" },
-        { name: "PostgreSQL", icon: "Images/postgresql.png" }
+        { name: "MySQL", icon: "/images/mysql.svg" },
+        { name: "MongoDB", icon: "/images/mongodb.png" },
+        { name: "Oracle", icon: "/images/oracle.svg" },
+        { name: "SQLite", icon: "/images/sqlite.svg" },
+        { name: "PostgreSQL", icon: "/images/postgresql.png" }
       ]
     }
   ];

@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in">
         <div className="mb-8">
           <img 
-            src="Images/ganesh.JPG"
+            src="/images/ganesh.JPG"
             alt="Ganesh Pawar"
             className="w-40 h-40 rounded-full mx-auto border-4 border-primary glow-primary object-cover"
           />
